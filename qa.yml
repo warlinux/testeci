@@ -3,7 +3,7 @@
   gather_facts: false
   hosts: localhost
   name: "Deploy QA"
-  became: true
+  become: true
   tasks: 
     - 
       file: "path=/bionexo state=directory"

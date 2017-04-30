@@ -1,0 +1,18 @@
+--- 
+- 
+  gather_facts: false
+  hosts: localhost
+  name: "Deploy QA"
+  tasks: 
+    - 
+      file: "path=/bionexo state=directory"
+      name: "Creates directory bionexo"
+    - 
+      copy: 
+        dest: /bionexo/docker-compose.yml
+        group: root
+        mode: 420
+        owner: root
+        src: docker-compose.yml
+    - 
+      shell: "docker-compose -f /bionexo/docker-compose.yml up -d"

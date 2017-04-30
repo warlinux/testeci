@@ -3,6 +3,7 @@
   gather_facts: false
   hosts: localhost
   name: "Deploy QA"
+  became: true
   tasks: 
     - 
       file: "path=/bionexo state=directory"
@@ -15,4 +16,4 @@
         owner: root
         src: docker-compose.yml
     - 
-      shell: "docker-compose -f /bionexo/docker-compose.yml up -d"
+      shell: "sudo docker-compose -f /bionexo/docker-compose.yml up -d"

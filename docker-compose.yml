@@ -1,0 +1,4 @@
+testeci:
+  image: testeci
+  ports:
+    - 80:8080

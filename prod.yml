@@ -2,7 +2,7 @@
 - 
   gather_facts: false
   hosts: testeci
-  name: "Deploy QA"
+  name: "Deploy PROD"
   become: true
   tasks: 
     - 

@@ -1,0 +1,4 @@
+testeci:
+  image: warlinux/testeci
+  ports:
+    - 8080:8080

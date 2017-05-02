@@ -1,0 +1,2 @@
+[testeci]
+172.16.250.164 ansible_ssh_user=ec2-user

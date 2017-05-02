@@ -1,7 +1,7 @@
 --- 
 - 
   gather_facts: false
-  hosts: localhost
+  hosts: testeci
   name: "Deploy QA"
   become: true
   tasks: 

@@ -3,7 +3,9 @@
   gather_facts: false
   hosts: testeci
   name: "Deploy QA"
-  become: true
+  become: yes
+  become_method: sudo
+  become_user: root
   tasks: 
     - 
       file: "path=/bionexo state=directory"
@@ -16,4 +18,4 @@
         owner: root
         src: docker-compose.yml
     - 
-      shell: "sudo docker-compose -f /bionexo/docker-compose.yml up -d"
+      shell: "docker-compose -f /bionexo/docker-compose.yml up -d"

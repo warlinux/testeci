@@ -8,6 +8,7 @@ node {
   }
   
   stage('Build Container') {
+    checkout scm
     sh "sudo docker build -t testeci ."
   }
  

@@ -13,7 +13,7 @@ node {
  
   stage 'Approve for Deploy'
     timeout(time: 1, unit: 'MIN') {
-    input message: 'Do you want to deploy?', submitter: 'ops'
+    input message: 'Do you want to deploy?'
   }
 
 }

@@ -14,10 +14,8 @@ node {
   }
  
   stage 'Approve for Deploy'
-   retry(3) {
      timeout(time: 60, unit: 'SECONDS') {
      input message: 'Do you want to deploy?', submitter: 'admin'
-   }
  }
 
 }

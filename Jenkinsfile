@@ -7,8 +7,8 @@ node {
     sh "/bin/hostname"
   }
   
-  stage('Date') {
-    sh "/bin/date"
+  stage('Build Container') {
+    sh "sudo docker build -t testeci ."
   }
  
   stage('Deploy') {

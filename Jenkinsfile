@@ -6,4 +6,9 @@ node {
   stage('Hostname') {
     sh "/bin/hostname"
   }
+  
+  stage('Date') {
+    sh "/bin/date"
+  }
+
 }

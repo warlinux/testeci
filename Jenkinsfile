@@ -10,5 +10,9 @@ node {
   stage('Date') {
     sh "/bin/date"
   }
+ 
+  stage('Deploy') {
+    input 'fazer deploy'
+  }
 
 }

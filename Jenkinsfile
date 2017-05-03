@@ -1,6 +1,6 @@
 node {
-  stage('HelloWorld') {
-    echo 'Hello World'
+  stage('Checkout SCM') {
+    checkout scm
   }
 
   stage('Hostname') {
@@ -8,12 +8,12 @@ node {
   }
   
   stage('Build Container') {
-    checkout scm
     sh "sudo docker build -t testeci ."
   }
  
-  stage('Deploy') {
-    input 'fazer deploy'
+  stage 'Approve for Deploy'
+    timeout(time: 1, unit: 'MIN') {
+    input message: 'Do you want to deploy?', submitter: 'ops'
   }
 
 }

@@ -1,4 +1,5 @@
 testeci:
+  #image: {{ docker_tag }}
   image: warlinux/testeci
   ports:
     - 80:8080

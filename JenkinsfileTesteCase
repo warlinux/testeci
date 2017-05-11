@@ -1,0 +1,23 @@
+node {
+    switch (env.ENVIRONMENT) {
+        case "PROD":
+            stage ('Old version WEB - CO') {
+                sh 'curl -s --insecure https://www.bionexo.com.co/jsp/version.txt'
+            }
+
+            stage ('Deploy PROD')
+                sh 'echo PROD'
+            }
+            break
+        case "SANDBOX":
+            stage ('Old version Sandbox WEB - CO') {
+                sh 'curl -s --insecure https://sandbox.bionexo.com.co/jsp/version.txt'
+            }
+
+            stage ('Deploy Sandbox')
+                sh 'echo SANDBOX'
+            }
+            break
+        }
+}
+

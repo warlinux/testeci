@@ -18,4 +18,4 @@
         owner: root
         src: docker-compose-prod.yml
     - 
-      shell: "docker-compose -f /bionexo/docker-compose.yml up -d"
+      shell: "docker-compose kill && docker-compose rm --force && docker-compose -f /bionexo/docker-compose.yml up -d"

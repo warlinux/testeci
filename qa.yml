@@ -2,7 +2,7 @@
 - 
   gather_facts: false
   hosts: testeci
-  name: "Deploy QA"
+  name: "Deploy QA Teste"
   become: yes
   become_method: sudo
   become_user: root

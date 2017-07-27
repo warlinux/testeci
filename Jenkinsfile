@@ -9,9 +9,9 @@ node {
     sh "/bin/hostname"
   }
   
-#  stage('Build Container') {
-#    sh "sudo docker build -t testeci ."
-#  }
+//  stage('Build Container') {
+//    sh "sudo docker build -t testeci ."
+//  }
  
   stage 'Approve for Deploy'
      timeout(time: 60, unit: 'SECONDS') {
